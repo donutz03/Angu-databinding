@@ -110,4 +110,18 @@ import {CommonModule} from '@angular/common'
   </ng-template>
 </div>
 
-<div [ngClass]
+<div [ngClass]="{'active': isActive,
+                 'disabled': isDisabled}">
+
+<div [ngStyle]="{'property': 'value'}">
+<div [ngStyle]="dynamicStyles()">
+
+import { FormsModule } from '@angular/forms'
+
+<input [(ngModel)]="useName">
+
+import { Directive, ... } from '@angular/core';
+
+@Component({...})
+class MyComponent() {}
+
