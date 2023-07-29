@@ -7,3 +7,9 @@ import { catchError, retry } from 'rxjs/operators';
 export class ConfigService {
   cpnstructor(private http: HttpClient) { }
 }
+
+configUrl = 'assets/config.json'
+
+getConfig() {
+  return this.http.get<Config>(this.configUrl);
+}
