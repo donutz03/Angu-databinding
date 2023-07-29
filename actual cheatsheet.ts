@@ -195,5 +195,79 @@ ngOnDestroy() { ... }
 import { Routes, RouterModule, ... } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }
-]
+  { path: '', component: HomeComponent },
+  { path: 'path/:routeParam', component: MyComponent },
+  { path: 'staticPath', component: ... },
+  { path: '**', component: ... }
+  { path: 'oldPath', redirectTo: '/staticPath' },
+  { path: ..., component: ..., data: { message: 'Custom' } }
+];
+
+const routing = RouterModule.forRoot(routes);
+
+<router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>
+
+<a routerLink="/path">
+<a [routerLink]="[ '/path', routeParam ]">
+
+<a [routerLink]="[ '/path', { matrixParam: 'value' } ]">
+
+<a [routerLink]="[ '/path' ]" [queryParams]="{ page: 1 }">
+
+<a [routerLink]="[ '/path' ]" fragment="anchor">
+
+<a [routerLink]="['/path']" routerLinkActive="active" 
+ariaCurrentWhenActive="page">
+
+function canActivateGuard: CanActivateFn = 
+  (
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshoto
+  ) => { ... }
+
+  { path: ..., canActivate: [canActivateGuard] }
+
+function canDeactivateGuard: CanDeactivateFn<T> = 
+    (
+      component: T,
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot
+
+    ) => { ... }
+
+    {path: ...CommonModule, canDeactivate: [canDeactivateGuard] }
+
+    function canActivateChildGuard: CanActivateChildFn = 
+    (
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot
+    ) => { ... }
+
+    { path: ...CommonModule, canActivateChild: [canActivateGuard], children: ...}
+
+    function resolveGuard implements ResolveFn<T> = 
+    (
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot
+    ) => { ... }
+
+    { path: ..., resolve: [resolveGuard] }
+
+    function canLoadGuard: CanLoadFn = 
+    (
+      route: Route
+    ) => { ... }
+
+    { path: ..., canLoad: [canLoadGuard], loadChildren: ... }
+
+
+
+
+
+
+
+
+
+
+
