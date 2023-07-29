@@ -125,3 +125,75 @@ import { Directive, ... } from '@angular/core';
 @Component({...})
 class MyComponent() {}
 
+@Directive({...})
+class MyDirective() {}
+
+@Pipe
+class MyPipe() {}
+
+@Injectable
+class MyService() {}
+
+@Directive({
+  property1: value1,
+  ...
+})
+
+selector: '.cool-button:not(a)'
+
+providers: [
+  MyService,
+  { provide: ... }
+]
+
+viewProviders: [MyService, { provide: ... }]
+
+template: 'Hello {{name}}'
+templateUrl: 'my-component.html'
+
+styles: ['.primary {color: red']
+styleUrls: ['my-component.css']
+
+import { Input, ... } from '@angular/core'
+
+@Input() myProperty;
+
+@Output() myEvent = new EventEmitter();
+
+@HostBinding('class.valid') isValid;
+
+@HostListener('click', ['$event']) onclick(e) {...}
+
+@ContentChild(myPredicate) myChildComponent;
+
+@ContentChildren(myPredicate) myChildComponents;
+
+@ViewChild(myPredicate) myChildComponent;
+
+@ViewChildren(myPredicate) myChildComponents;
+
+constructor(myService: MyService, ...) { ... }
+
+ngOnChanges(changeRecord) { ... }
+
+ngOnInit() { ... }
+
+ngDoCheck() { ... }
+
+ngAfterContentInit() { ... }
+
+ngAfterContentChecked() { ... }
+
+ngAfterViewInit() { ... }
+
+ngOnDestroy() { ... }
+
+{ provide: MyService, useFactory: myFactory }
+
+{ provide: myValue, useValue: 41 }
+
+import { Routes, RouterModule, ... } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent }
+]
