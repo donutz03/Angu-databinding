@@ -5,6 +5,7 @@ function VideoList({ videos, emptyHeading }) {
     const noun = count > 1 ? 'Videos' : 'Video';
     heading = count + ' ' + noun;
   }
+  
   return (
     <section>
       <h2>{heading}</h2>
