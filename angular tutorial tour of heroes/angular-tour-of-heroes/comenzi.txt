@@ -38,3 +38,12 @@ always export the component class so you can import it elsewhere, like in the Ap
 
 add a hero property in heroes.component.ts
 hero = 'Windstorm';
+
+the *ngFor is angular's repeater directive. it repeats the host element for each element
+in a list.
+the syntax is :
+<li> is the host elementheroes holds the mock heroes list from the heroescomponent class,
+hero holds the current hero object for each iteration through the list.
+the asterisk * in front of ngFor is a critical part of the syntax
+*ngFor
+*ngFor *ngFor *ngFor
