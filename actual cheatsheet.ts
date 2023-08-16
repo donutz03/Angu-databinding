@@ -147,6 +147,8 @@ providers: [
   { provide: ... }
 ]
 
+
+-----------------AICI AM RAMAS, DE AICI NU AM MAI SCRIS ------------------------------
 viewProviders: [MyService, { provide: ... }]
 
 template: 'Hello {{name}}'

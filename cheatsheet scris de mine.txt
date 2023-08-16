@@ -48,3 +48,21 @@ import {CommonModule} from '@angular/common'
 </div>
 <div [ngClass]="{'active':isActive,;'disabled':isDisabled}"><div [ngStyle]="{'property':'value'}">
 <div [ngStyle]="dynamicStyles()">
+import {FormsModule} from '@angular/forms'
+<input [(ngModel)]="useName">
+import {Directive, ...} from '@angular/core';
+@Component({...})
+class MyComponent(){}
+@Directive({...})
+class MyDirective(){}
+@Pipe
+class MyPipe(){}
+@Injectable
+class MyService(){}
+@Directive({
+  property1: value1,
+  ...
+})
+selector: '.cool-button:not(a)'
+providers:[MyService,
+{provide:...}]
