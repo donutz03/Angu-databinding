@@ -116,6 +116,7 @@ import {CommonModule} from '@angular/common'
 <div [ngStyle]="{'property': 'value'}">
 <div [ngStyle]="dynamicStyles()">
 
+
 import { FormsModule } from '@angular/forms'
 
 <input [(ngModel)]="useName">
