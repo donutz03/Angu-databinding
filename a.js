@@ -3,7 +3,7 @@ function VideoList({ videos, emptyHeading }) {
   let heading = emptyHeading;
   if (count > 0) {
     const noun = count > 1 ? 'Videos' : 'Video';
-    heading = count + ' ' + noun;
+    heading = count + " " + noun;
   }
 
   
