@@ -35,7 +35,6 @@ Card Node.: {{cardNumber | myCardNumberFormatter}}
 <p>
 Employer: {{employer?.companyName}}
 </p>
-
 <svg:rect x="0" y="0" width="100" height="100"/>
 <svg><rect x="0" y="0" width="100" height="100"/></svg>
 import {CommonModule} from '@angular/common'
